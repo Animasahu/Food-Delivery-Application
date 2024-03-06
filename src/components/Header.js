@@ -1,7 +1,8 @@
 import { LOGO_UGL } from "../utils/constants";
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("login");
@@ -9,9 +10,12 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  useEffect(() => {
-    // console.log("useEffect called");
-  }, [btnNameReact]);
+  const {loggedInUser} = useContext(UserContext);
+  console.log(loggedInUser);
+
+  // useEffect(() => {
+  //    console.log("useEffect called");
+  // }, [btnNameReact]);
 
   return (
     <div className="flex justify-between bg-green-50 shadow-lg ">
@@ -44,6 +48,7 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
+          <li className="px-4 font-bold"> {loggedInUser} </li>
         </ul>
       </div>
     </div>
