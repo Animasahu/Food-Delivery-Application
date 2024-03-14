@@ -58,3 +58,11 @@
  # 2 types of Routing
   - client side Routing
   - server side Routing
+
+ # Redux Toolkit
+  - Install @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to ore app
+  - Slice (cartSlice)
+  - dispatch(action)
+  - Selector
