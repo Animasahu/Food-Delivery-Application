@@ -15,9 +15,7 @@ const Body = () => {
 
   console.log("Body rendered", listOfRestaurants);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+ 
 
   const fetchData = async () => {
     const data = await fetch(
@@ -35,6 +33,10 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const onlineStatus = useOnlineStatus();
 

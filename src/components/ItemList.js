@@ -37,7 +37,6 @@ const ItemList = ({ items }) => {
               <button className="p-2 my-20 mx-6 bg-white text-green-400 shadow-lg rounded-lg"
                onClick={() => haldleAddItem(item)} 
               >
-              
                 Add +
               </button>
             </div>
